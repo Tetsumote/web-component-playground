@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module loader JavaScript</title>
+</head>
+
+<body>
+    <p>Placeholder for Random Number</p>
+
+    <script type="module">
+        import AddNumberWithNewName from './addNumber.js';
+        new AddNumberWithNewName()
+    </script>
+    <script type="module">
+        import {add, subtract} from './calc.js';
+        console.log(add(1,5));
+    </script>
+</body>
+
+</html>

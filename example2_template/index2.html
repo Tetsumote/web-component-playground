@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template HTML</title>
+</head>
+
+<body>
+    <template id="hello-world-template">
+        <div>
+            <p>Hello Templates</p>
+            <p>This is a small template</p>
+        </div>
+    </template>
+    <hello-world></hello-world>
+    <!-- <button onclick="handleClick()">Put Tempalte Code to target div</button>
+
+    <div id="target"></div> -->
+
+    <script>
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+                let templateReference = document.querySelector('#hello-world-template');
+                let templateContent = templateReference.content;
+                let shadowRoot = this.attachShadow({
+                    mode: 'open'
+                })
+                shadowRoot.append(templateContent.cloneNode(true))
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+
+
+
+
+
+        // function handleClick() {
+        //     let templateReference = document.querySelector('#my-template');
+        //     let templateContent = templateReference.content;
+        //     let targetDOM = document.querySelector('#target')
+        //     let targetShadowRoot = targetDOM.attachShadow({
+        //         mode: 'open'
+        //     })
+
+        //     targetShadowRoot.appendChild(templateContent.cloneNode(true))
+        // }
+    </script>
+</body>
+
+</html>
