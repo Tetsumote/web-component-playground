@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page</title>
+    <script type="module">
+        import StudentAttendanceTable from './StudentAttendanceTable.js';
+        import InformationBanner from './InformationBanner.js';
+        import TimeSlot from './TimeSlot.js';
+
+        customElements.define('student-attendance-table',StudentAttendanceTable);
+        customElements.define('information-banner', InformationBanner);
+        customElements.define('time-slot', TimeSlot);
+    </script>
+</head>
+
+<body>
+
+    <time-slot></time-slot>
+    <student-attendance-table></student-attendance-table>
+    <information-banner></information-banner>
+
+    <template id="time-slot-template">
+        <div>
+            <div>
+                <input type="radio" name="timeslot" value="slot1" checked>9:00 AM - 11:00 AM
+            </div>
+            <div>
+                <input type="radio" name="timeslot" value="slot2">9:00 AM - 11:00 AM
+            </div>
+            <div>
+                <input type="radio" name="timeslot" value="slot3">9:00 AM - 11:00 AM
+            </div>
+        </div>
+    </template>
+    <template id="information-banner-template">
+        <div>
+            <a href="tel:1234567890">Call: 1234567890</a>
+            <div>
+                <p>Just Some Random Street</p>
+                <p>Town</p>
+                <p>State - 123456</p>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>

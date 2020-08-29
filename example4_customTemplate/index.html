@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revamped Paragraph</title>
+    <script type="module">
+        import RevampedParagraph from './revampedParagraph.js';
+        customElements.define('revamped-paragraph', RevampedParagraph);
+    </script>
+</head>
+
+<body>
+
+    <revamped-paragraph></revamped-paragraph>
+
+
+    <template id="revamped-paragraph-template">
+        <h1>Revamped Paragraph</h1>
+        <p>This is the default paragraph inside the revamped-paragraph element</p>
+    </template>
+</body>
+
+</html>
