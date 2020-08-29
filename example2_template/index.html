@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template HTML</title>
+</head>
+<body>
+    <template id="my-template">
+    <div class="red-border">
+        <p>Hello Templates</p>
+        <p>This is a small template</p>
+    </div>
+    
+    </template>
+
+    <button onclick="handleClick()">Put Tempalte Code to target div</button>
+
+    <div id="target"></div>
+
+    <script>
+    function handleClick(){
+        let templateReference = document.querySelector('#my-template');
+        let templateContent = templateReference.content;
+        document.querySelector('#target').appendChild(templateContent.cloneNode(true));
+    }
+    </script>
+</body>
+</html>
