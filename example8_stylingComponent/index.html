@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Web Components</title>
+    <script type="module">
+        import CompanyHeader from './CompanyHeader.js';
+        customElements.define('company-header', CompanyHeader);
+    </script>
+</head>
+
+<body>
+    <company-header icon="icon.png" page-name="My Page"></company-header>
+</body>
+
+</html>
