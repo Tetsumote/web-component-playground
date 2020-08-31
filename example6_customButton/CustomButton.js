@@ -14,6 +14,13 @@ export default class CustomButton extends HTMLElement {
             this.handleClick(e);
         })
     }
+    disconnectedCallback() {
+        console.log('We are inside disconnectedCallback')
+        this.querySelector('button').removeEventListener('click', this.handleClick)
+    }
+    adoptedCallback() {
+        console.log(`I am adopted`)
+    }
 
     handleClick() {
         this.timesClicked++;
